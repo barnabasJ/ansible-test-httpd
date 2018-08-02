@@ -1,5 +1,5 @@
 FROM barnabasj/ansible-test-base
-RUN yum install -y httpd
+RUN yum install -y httpd \
     && mkdir -p /etc/httpd/modsecurity.d/activated_rules
 RUN pip install --upgrade pip setuptools \
     && pip install ansible pycrypto pytest pytest-gitignore pytest-xdist \
