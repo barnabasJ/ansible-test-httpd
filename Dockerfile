@@ -1,5 +1,5 @@
 FROM centos:6
-LABEL maintainer="Jeff Geerling"
+LABEL maintainer="Jovanovics Barnabas"
 
 # Install Ansible and other requirements.
 RUN yum makecache fast \
@@ -14,6 +14,7 @@ RUN yum makecache fast \
       pyOpenSSL \
       python2-ndg_httpsclient \
       python-pyasn1 \
+      python-pip \
  && yum clean all
 
 # Disable requiretty.
