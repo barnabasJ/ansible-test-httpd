@@ -16,9 +16,6 @@ RUN yum makecache fast \
       python-pyasn1 \
       python27 \
  && yum clean all
- 
- RUN cd /opt/rh/python27/root/usr/bin/ \
-  && ./easy_install-2.7
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
