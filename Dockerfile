@@ -4,7 +4,7 @@ LABEL maintainer="Jovanovics Barnabas"
 # Install Ansible and other requirements.
 RUN yum makecache fast \
  && yum -y install deltarpm epel-release \
-      centos-release-scl
+      centos-release-scl \
  && yum -y update \
  && yum -y install \
       sudo \
