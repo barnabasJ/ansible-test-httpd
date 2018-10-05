@@ -17,8 +17,8 @@ RUN yum makecache fast \
       python27 \
  && yum clean all
 
-RUN scl enable python27 bash \
-  && /opt/rh/python27/root/usr/bin/easy_install-2.7 pip
+RUN echo easy_install-2.7 pip | scl enable python27 -
+
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
