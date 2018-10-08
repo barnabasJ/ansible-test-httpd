@@ -19,7 +19,7 @@ RUN yum makecache fast \
  && yum clean all
 
 RUN echo easy_install-2.7 pip | scl enable python27 - \
- && echo pip install ansible==2.4.3 testinfra pytest | scl enable python27 -
+ && echo pip install ansible==2.4.3 testinfra pytest pycrypto | scl enable python27 -
 
 
 # Disable requiretty.
