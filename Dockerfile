@@ -16,6 +16,7 @@ RUN yum makecache fast \
       python-pyasn1 \
       python27 \
       git \
+      gcc \
  && yum clean all
 
 RUN echo easy_install-2.7 pip | scl enable python27 - \
