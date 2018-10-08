@@ -26,5 +26,5 @@ RUN echo easy_install-2.7 pip | scl enable python27 - \
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
-RUN yum install -y httpd \
+RUN yum install -y httpd httpd-itk\
     && mkdir -p /etc/httpd/modsecurity.d/activated_rules
